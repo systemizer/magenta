@@ -91,6 +91,16 @@ py_binary(
     ],
 )
 
+py_binary(
+    name = "convert_note_sequences_to_midi_file",
+    srcs = ["scripts/convert_note_sequences_to_midi_file.py"],
+    srcs_version = "PY2AND3",
+    deps = [
+        ":midi_io",
+        ":note_sequence_io",
+    ],
+)
+
 py_test(
    name = "convert_midi_dir_to_note_sequences_test",
    srcs = ["scripts/convert_midi_dir_to_note_sequences_test.py"],
